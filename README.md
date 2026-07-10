@@ -16,13 +16,19 @@ Default settings from Neovim ([vim_diff.txt](https://neovim.io/doc/user/vim_diff
 
 ## Installation
 
+```bash
+mkdir -p ~/.config/vim/plugin
+curl -o ~/.config/vim/plugin/neodefaults.vim https://raw.githubusercontent.com/vec2pt/vim-neodefaults/refs/heads/main/plugin/neodefaults.vim
+```
+
 Add this line at the top of your `.vimrc` file.
 
 ```vim
-source <path/to/vim-neodefaults>/plugin/neodefaults.vim
+unlet! g:loaded_neodefaults
+source plugin/neodefaults.vim
 ```
 
-You can also use the plugin manager, but  that will cause 'neodefaults.vim' to overwrite your options.
+You can also use the plugin manager, but this will (may) cause 'neodefaults.vim' to override your options.
 
 
 ## Testing
