@@ -9,8 +9,8 @@ Default settings from Neovim ([vim_diff.txt](https://neovim.io/doc/user/vim_diff
 - This plugin has been tested exclusively on Linux.
 - In the path options (such as `backupdir`, `directory`, `undodir`, `viewdir`, `viminfofile`), the root folder is `vim`, not `nvim`.
 - The mappings added to this plugin do not cover all the cases that Neovim covers, so they may be slightly buggy.
-- `gc` / `gcc` mapping. For users of Vim 9.1 and later, [`comment.vim`](https://github.com/vim/vim/blob/master/runtime/pack/dist/opt/comment) will be loaded and used; for users of earlier versions and [Vim Classic](https://vim-classic.org/), I recommend considering the ['commentary.vim'](https://github.com/tpope/vim-commentary) plugin.
-- Pairs mapping (e.g., `]a` / `[a`) is not included in this plugin. I recommend considering the [`unimpaired.vim`](https://github.com/tpope/vim-unimpaired).
+- `gc` / `gcc` mapping. For users of Vim 9.1 and later, ['comment.vim'](https://github.com/vim/vim/blob/master/runtime/pack/dist/opt/comment) will be loaded and used; for users of earlier versions and [Vim Classic](https://vim-classic.org/), I recommend considering the ['commentary.vim'](https://github.com/tpope/vim-commentary) plugin.
+- Pairs mapping (e.g., `]a` / `[a`) is not included in this plugin. I recommend considering the ['unimpaired.vim'](https://github.com/tpope/vim-unimpaired).
 - Remember, Vim doesn't have features like LSP and Treesitter, so the related settings aren't available.
 
 
@@ -22,7 +22,7 @@ Add this line at the top of your `.vimrc` file.
 source <path/to/vim-neodefaults>/plugin/neodefaults.vim
 ```
 
-You can also use the plugin manager, but  that will cause `neodefaults.vim` to overwrite your options.
+You can also use the plugin manager, but  that will cause 'neodefaults.vim' to overwrite your options.
 
 
 ## Testing
