@@ -92,7 +92,7 @@ set nostartofline
 set switchbuf=uselast
 set tabpagemax=50
 set tags=./tags;,tags
-set termguicolors
+set notermguicolors
 set notitle
 set titleold=
 set ttimeout
