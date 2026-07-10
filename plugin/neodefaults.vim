@@ -41,17 +41,17 @@ set autoread
 set background=dark
 set backupdir=$XDG_STATE_HOME/vim/backup/ | call mkdir(&backupdir, 'p') | set backupdir^=.
 set belloff=all
-set cdhome
+if v:version >= 900 | set cdhome | endif
 set comments+=fb:•
 set commentstring=
 set complete-=i
 set completeopt=menu,popup
 "set define=
-set diffopt+=linematch:40
+if v:version >= 920 | set diffopt+=linematch:40 | endif
 set directory=$XDG_STATE_HOME/vim/swap/ | call mkdir(&directory, 'p')
 set display=lastline
 set encoding=utf-8
-set fillchars+=vert:│,fold:·,foldsep:│
+if v:version >= 900 | set fillchars+=vert:│,fold:·,foldsep:│ | endif
 set formatoptions=tcqj
 if executable('rg')
   set grepprg=rg\ --vimgrep\ -uu
@@ -65,21 +65,22 @@ set hlsearch
 set incsearch
 if has('win32') | set isfname-=: | endif
 set nojoinspaces
-set jumpoptions= "clean
+if v:version >= 910 | set jumpoptions= | endif
 set keywordprg=:Man
 set langnoremap
 set nolangremap
 set laststatus=2
 set listchars=tab:>\ ,trail:-,nbsp:+
 set maxcombine=6
-set maxsearchcount=999
+if v:version >= 920 | set maxsearchcount=999 | endif
 set mouse=nvi
 set mousemodel=popup_setpos
 set nrformats=bin,hex
 "set path=.,,
 set sessionoptions+=unix,slash sessionoptions-=options
 set noshelltemp
-set shortmess+=CF shortmess-=S
+set shortmess+=F shortmess-=S
+if v:version >= 910 | set shortmess+=C | endif
 set sidescroll=1
 set smarttab
 " set spellfile' defaults to stdpath("data").."/site/spell/"
@@ -98,7 +99,8 @@ set viewdir=$XDG_STATE_HOME/vim/view/ | call mkdir(&viewdir, 'p')
 set viewoptions+=unix,slash viewoptions-=options
 set viminfo^=! "viminfo=!,'100,<50,s10,h,r/tmp/,r/private/
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
-set wildoptions=pum,tagfile
+set wildoptions=tagfile
+if v:version >= 900 | set wildoptions=+pum | endif
 
 
 " Plugins
