@@ -7,7 +7,8 @@
 " - Update the 'spellfile' file. Create a function to handle the 'spellfile' filename.
 " - Test the settings for built-in plugins.
 " - Check the behavior of nvim-dir - https://neovim.io/doc/user/plugins/#dir
-" - Add mappings
+" - Add mappings `v_Q`, `v_@`
+" - Check from which version `n_&` became the default
 
 if exists('g:loaded_neodefaults') | finish | endif
 let g:loaded_neodefaults = 1
@@ -115,3 +116,16 @@ endif
 if findfile('plugin/comment.vim', &rtp) ==# '' && has('patch-9.1.1229')
   packadd comment
 endif
+
+
+" Mappings
+nnoremap Y y$
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
+nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<CR><C-L>
+nnoremap & :&&<CR>
+" - dir-mappings
+" Q v_Q-default
+" @ v_@-default
+vnoremap # yq?p<CR>
+vnoremap * yq/p<CR>
