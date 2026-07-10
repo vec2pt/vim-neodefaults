@@ -39,6 +39,7 @@ endif
 set autoindent
 set autoread
 set background=dark
+set backspace=indent,eol,start
 set backupdir=$XDG_STATE_HOME/vim/backup/ | call mkdir(&backupdir, 'p') | set backupdir^=.
 set belloff=all
 if v:version >= 900 | set cdhome | endif
@@ -47,6 +48,7 @@ set commentstring=
 set complete-=i
 set completeopt=menu,popup
 "set define=
+set diffopt+=indent-heuristic
 if v:version >= 920 | set diffopt+=linematch:40 | endif
 set directory=$XDG_STATE_HOME/vim/swap/ | call mkdir(&directory, 'p')
 set display=lastline
@@ -77,10 +79,12 @@ set mouse=nvi
 set mousemodel=popup_setpos
 set nrformats=bin,hex
 "set path=.,,
+set ruler
 set sessionoptions+=unix,slash sessionoptions-=options
 set noshelltemp
 set shortmess+=F shortmess-=S
 if v:version >= 910 | set shortmess+=C | endif
+set showcmd
 set sidescroll=1
 set smarttab
 " set spellfile' defaults to stdpath("data").."/site/spell/"
@@ -99,6 +103,7 @@ set viewdir=$XDG_STATE_HOME/vim/view/ | call mkdir(&viewdir, 'p')
 set viewoptions+=unix,slash viewoptions-=options
 set viminfo^=! "viminfo=!,'100,<50,s10,h,r/tmp/,r/private/
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
+set wildmenu
 set wildoptions=tagfile
 if v:version >= 900 | set wildoptions=+pum | endif
 
